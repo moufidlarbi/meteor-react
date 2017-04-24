@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
-
-// import { Tasks } from '../api/tasks.js';
+import classnames from 'classnames';
 
 export default class Task extends Component {
   toggleChecked() {
@@ -19,7 +18,10 @@ export default class Task extends Component {
 
   render() {
 
-    const taskClassName = this.props.task.checked ? 'checked' : '';
+    const taskClassName = classnames({
+      checked: this.props.task.checked,
+      private: this.props.task.private,
+    });
 
     return (
       <li className={taskClassName}>
