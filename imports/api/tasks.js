@@ -1,8 +1,14 @@
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
 import { Mongo } from 'meteor/mongo';
- 
+
 export const Tasks = new Mongo.Collection('tasks');
+
+if (Meteor.isServer) {
+  Meteor.publish('tasks', function taksPublication() {
+    return Tasks.find();
+  });
+}
 
 Meteor.methods({
   'tasks.insert'(text) {
