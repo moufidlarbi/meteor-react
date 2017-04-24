@@ -7,6 +7,14 @@ import { Tasks } from '../api/tasks.js';
 import Task from './Task.jsx';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hideCompleted: false,
+    };
+  }
+  
   handleSubmit(event) {
     event.preventDefault();
 
