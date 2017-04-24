@@ -1,16 +1,19 @@
 import React, { Component, PropTypes } from 'react';
+import { Meteor } from 'meteor/meteor';
 
-import { Tasks } from '../api/tasks.js';
+// import { Tasks } from '../api/tasks.js';
 
 export default class Task extends Component {
   toggleChecked() {
     Tasks.update(this.props.task._id, {
-      $set: { checked: !this.props.task.checked },
+      // $set: { checked: !this.props.task.checked },
+      Meteor.call('tasks.setChecked', this.props.taks._id, !this.props.task.checked);
     });
   }
 
   deleteThisTask() {
-    Tasks.remove(this.props.task._id);
+    // Tasks.remove(this.props.task._id);
+    Meteor.call('tasks.remove', this.props.task._id);
   }
 
   render() {
