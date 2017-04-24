@@ -14,7 +14,7 @@ class App extends Component {
       hideCompleted: false,
     };
   }
-  
+
   handleSubmit(event) {
     event.preventDefault();
 
@@ -28,6 +28,12 @@ class App extends Component {
     ReactDOM.findDOMNode(this.refs.textInput).value = '';
   }
 
+  toggleHideCompleted() {
+    this.setState({
+      hideCompleted: !this.state.hideCompleted,
+    });
+  }
+  
   renderTasks() {
     return this.props.tasks.map((task) => (
       <Task key={task._id} task={task} />
