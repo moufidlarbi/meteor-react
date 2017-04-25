@@ -58,7 +58,7 @@ class App extends Component {
           <nav className="navbar navbar-default navbar-fixed-top">
             <div className="container">
               <div className="navbar-header">
-                <a className="navbar-brand" href="#">Todo List ({this.props.incompleteCount})</a>
+                <a className="navbar-brand" href="#"><span className="glyphicon glyphicon-th-list" aria-hidden="true">&nbsp;</span>Todo List ({this.props.incompleteCount})</a>
               </div>
               <ul className="navbar-nav navbar-right">
                 <AccountsUIWrapper />

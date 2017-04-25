@@ -1,10 +1,9 @@
 /* CSS declarations go here */
 body {
   font-family: sans-serif;
-  /*background-color: #315481;*/
-  /*background-image: linear-gradient(to bottom, #315481, #918e82 100%);*/
-  /*background-attachment: fixed;*/
-
+  background-color: #315481;
+  background-image: linear-gradient(to bottom, #ffffff, #9dabff 100%);
+  background-attachment: fixed;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -47,18 +46,21 @@ h1 {
 
 form {
   margin-top: 10px;
-  margin-bottom: -10px;
+  margin-bottom: 20px;
   position: relative;
 }
 
 .new-task input {
   box-sizing: border-box;
-  padding: 10px 0;
-  background: transparent;
-  border: none;
+  padding: 10px 10px;
+  background-color: rgba(255, 255, 255, 0.83);
   width: 100%;
   padding-right: 80px;
   font-size: 1em;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: rgba(44, 92, 255, 0.66);
 }
 
 .new-task input:focus{
@@ -99,8 +101,8 @@ li.checked .text {
 }
 
 li.private {
-  background: #eee;
-  border-color: #ddd;
+  background: rgba(22, 162, 236, 0.08);
+  border-color: #4a4343;
 }
 
 header .hide-completed {
