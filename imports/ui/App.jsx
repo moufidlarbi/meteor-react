@@ -74,7 +74,7 @@ class App extends Component {
                 checked={this.state.hideCompleted}
                 onClick={this.toggleHideCompleted.bind(this)}
               />
-              Hide Completed Tasks
+              <span>&nbsp;Hide Completed Tasks</span>
             </label>
 
             { this.props.currentUser ?

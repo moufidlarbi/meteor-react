@@ -105,7 +105,7 @@ li.private {
   border-color: #4a4343;
 }
 
-header .hide-completed {
+.hide-completed {
   float: right;
 }
 
