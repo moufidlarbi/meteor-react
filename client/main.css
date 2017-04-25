@@ -1,9 +1,9 @@
 /* CSS declarations go here */
 body {
   font-family: sans-serif;
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
-  background-attachment: fixed;
+  /*background-color: #315481;*/
+  /*background-image: linear-gradient(to bottom, #315481, #918e82 100%);*/
+  /*background-attachment: fixed;*/
 
   position: absolute;
   top: 0;
@@ -25,12 +25,14 @@ body {
 }*/
 
 header {
-  background: #d2edf4;
-  background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+  /*background: #d2edf4;*/
+  /*background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);*/
   padding: 20px 15px 15px 15px;
   position: relative;
 }
-
+.tasks-panel {
+  margin-top:70px;
+}
 #login-buttons {
   display: block;
 }
@@ -66,7 +68,6 @@ form {
 ul {
   margin: 0;
   padding: 0;
-  background: white;
 }
 
 .delete {
@@ -110,6 +111,9 @@ header .hide-completed {
   margin-left: 5px;
 }
 
+.navbar-right {
+  margin-right: 0px;
+}
 @media (max-width: 600px) {
   li {
     padding: 12px 15px;

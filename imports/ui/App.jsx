@@ -54,26 +54,19 @@ class App extends Component {
 
   render() {
     return (
-
-
-
-      <div>
-
-
-        <nav className="navbar navbar-default navbar-fixed-top">
-          <div className="container">
-            <div className="navbar-header">
-              <a className="navbar-brand" href="#">Todo List ({this.props.incompleteCount})</a>
+      <div className="row">
+          <nav className="navbar navbar-default navbar-fixed-top">
+            <div className="container">
+              <div className="navbar-header">
+                <a className="navbar-brand" href="#">Todo List ({this.props.incompleteCount})</a>
+              </div>
+              <ul className="navbar-nav navbar-right">
+                <button type="button" className="btn btn-default navbar-btn"><AccountsUIWrapper /></button>
+              </ul>
             </div>
-            <ul className=" navbar-nav navbar-right">
-              <li><a href="#">Link</a></li>
-            </ul>
-          </div>
-        </nav>
+          </nav>
 
-        <div className="container">
-          <header>
-
+          <div className="container tasks-panel">
             <label className="hide-completed">
               <input
                 type="checkbox"
@@ -84,8 +77,6 @@ class App extends Component {
               Hide Completed Tasks
             </label>
 
-            <AccountsUIWrapper />
-
             { this.props.currentUser ?
               <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
                 <input
@@ -95,13 +86,14 @@ class App extends Component {
                 />
               </form> : ''
             }
-          </header>
 
-          <ul>
-            {this.renderTasks()}
-          </ul>
+            <ul>
+              {this.renderTasks()}
+            </ul>
+
+          </div>
         </div>
-      </div>
+
     );
   }
 }
