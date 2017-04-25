@@ -61,7 +61,7 @@ class App extends Component {
                 <a className="navbar-brand" href="#">Todo List ({this.props.incompleteCount})</a>
               </div>
               <ul className="navbar-nav navbar-right">
-                <button type="button" className="btn btn-default navbar-btn"><AccountsUIWrapper /></button>
+                <AccountsUIWrapper />
               </ul>
             </div>
           </nav>
