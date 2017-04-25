@@ -54,36 +54,53 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <header>
-          <h1>Todo List ({this.props.incompleteCount})</h1>
 
-          <label className="hide-completed">
-            <input
-              type="checkbox"
-              readOnly
-              checked={this.state.hideCompleted}
-              onClick={this.toggleHideCompleted.bind(this)}
-            />
-            Hide Completed Tasks
-          </label>
 
-          <AccountsUIWrapper />
 
-          { this.props.currentUser ?
-            <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
+      <div>
+
+
+        <nav className="navbar navbar-default navbar-fixed-top">
+          <div className="container">
+            <div className="navbar-header">
+              <a className="navbar-brand" href="#">Todo List ({this.props.incompleteCount})</a>
+            </div>
+            <ul className=" navbar-nav navbar-right">
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div className="container">
+          <header>
+
+            <label className="hide-completed">
               <input
-                type="text"
-                ref="textInput"
-                placeholder="Type to add new tasks"
+                type="checkbox"
+                readOnly
+                checked={this.state.hideCompleted}
+                onClick={this.toggleHideCompleted.bind(this)}
               />
-            </form> : ''
-          }
-        </header>
+              Hide Completed Tasks
+            </label>
 
-        <ul>
-          {this.renderTasks()}
-        </ul>
+            <AccountsUIWrapper />
+
+            { this.props.currentUser ?
+              <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
+                <input
+                  type="text"
+                  ref="textInput"
+                  placeholder="Type to add new tasks"
+                />
+              </form> : ''
+            }
+          </header>
+
+          <ul>
+            {this.renderTasks()}
+          </ul>
+        </div>
       </div>
     );
   }

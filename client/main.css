@@ -17,12 +17,12 @@ body {
   font-size: 14px;
 }
 
-.container {
+/*.container {
   max-width: 600px;
   margin: 0 auto;
   min-height: 100%;
   background: white;
-}
+}*/
 
 header {
   background: #d2edf4;
@@ -82,7 +82,7 @@ li {
   position: relative;
   list-style: none;
   padding: 15px;
-  border-bottom: #eee solid 1px;
+  /*border-bottom: #eee solid 1px;*/
 }
 
 li .text {
