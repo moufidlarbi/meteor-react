@@ -67,27 +67,29 @@ class App extends Component {
           </nav>
 
           <div className="container tasks-panel">
-            <label className="hide-completed">
-              <input
-                type="checkbox"
-                readOnly
-                checked={this.state.hideCompleted}
-                onClick={this.toggleHideCompleted.bind(this)}
-              />
-              <span>&nbsp;Hide Completed Tasks</span>
-            </label>
-
-            { this.props.currentUser ?
-              <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
-                <input
-                  type="text"
-                  ref="textInput"
-                  placeholder="Type to add new tasks"
-                />
-              </form> : ''
-            }
-
             <ul>
+              <label className="hide-completed">
+                <input
+                  type="checkbox"
+                  readOnly
+                  checked={this.state.hideCompleted}
+                  onClick={this.toggleHideCompleted.bind(this)}
+                />
+                <span>&nbsp;Hide Completed Tasks</span>
+              </label>
+            </ul>
+            <ul>
+              { this.props.currentUser ?
+                <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
+                  <input
+                    type="text"
+                    ref="textInput"
+                    placeholder="Type to add new tasks"
+                  />
+                </form> : ''
+              }
+            </ul>
+            <ul className="tasks-list">
               {this.renderTasks()}
             </ul>
 
