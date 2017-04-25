@@ -8,7 +8,6 @@ export default class Task extends Component {
   }
 
   deleteThisTask() {
-    // Tasks.remove(this.props.task._id);
     Meteor.call('tasks.remove', this.props.task._id);
   }
 
